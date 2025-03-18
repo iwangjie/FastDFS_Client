@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
  */
 @SuppressWarnings("unused")
 public class TestConstants {
-    private static String ip_home = "172.17.0.2";
+    private static String ip_home = "192.168.40.84";
     private static String ip_work = "10.0.75.2";
     private static String ip_work_store = "192.168.174.43";
     public static InetSocketAddress address = new InetSocketAddress(ip_home, FdfsMockSocketServer.PORT);

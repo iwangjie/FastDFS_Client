@@ -4,7 +4,7 @@
 
     <groupId>com.github.tobato</groupId>
     <artifactId>fastdfs-client</artifactId>
-    <version>1.26.7-SNAPSHOT</version>
+    <version>1.26.71-SNAPSHOT</version>
     <packaging>jar</packaging>
     <!-- x-SNAPSHOT -->
 
@@ -117,13 +117,10 @@
             </build>
             <distributionManagement>
                 <snapshotRepository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+                    <id>snapshots</id>
+                    <url>http://10.0.2.84:8081/nexus/content/repositories/snapshots/</url>
+                    <name>snapshots repository</name>
                 </snapshotRepository>
-                <repository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
             </distributionManagement>
         </profile>
         <profile>
@@ -144,23 +141,18 @@
                             </execution>
                         </executions>
                     </plugin>
-                    <!-- Javadoc <plugin> <groupId>org.apache.maven.plugins</groupId> 
-                        <artifactId>maven-javadoc-plugin</artifactId> <version>2.9.1</version> <executions> 
-                        <execution> <id>attach-javadocs</id> <phase>install</phase> <goals> <goal>jar</goal> 
-                        </goals> <configuration> <encoding>UTF-8</encoding> </configuration> </execution> 
+                    <!-- Javadoc <plugin> <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-javadoc-plugin</artifactId> <version>2.9.1</version> <executions>
+                        <execution> <id>attach-javadocs</id> <phase>install</phase> <goals> <goal>jar</goal>
+                        </goals> <configuration> <encoding>UTF-8</encoding> </configuration> </execution>
                         </executions> </plugin> -->
                 </plugins>
             </build>
             <distributionManagement>
-                <repository>
-                    <id>local-releases</id>
-                    <name>Nexus Release Repository</name>
-                    <url>http://${local.nexus}/nexus/content/repositories/releases/</url>
-                </repository>
                 <snapshotRepository>
-                    <id>local-snapshots</id>
-                    <name>Nexus Snapshot Repository</name>
-                    <url>http://${local.nexus}/nexus/content/repositories/snapshots/</url>
+                    <id>snapshots</id>
+                    <url>http://192.168.40.196:8081/nexus/content/repositories/snapshots/</url>
+                    <name>snapshots repository</name>
                 </snapshotRepository>
             </distributionManagement>
         </profile>
