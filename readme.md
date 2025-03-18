@@ -1,8 +1,8 @@
 FastDFS-Client 1.27.2(iwangjie)(2025-3-18)
 ---
 
-**基于 https://github.com/tobato/FastDFS_Client 的分支，主要修复 5.1.x 的协议兼容问题，如果服务端版本为 5.1.x 可以使用此版本**
-**单元测试全部通过，服务端版本是FastDFS_V5.11**
+**基于 https://github.com/tobato/FastDFS_Client 的分支，主要修复 5.1x 的协议兼容问题，如果服务端版本为 5.1x 可以使用此版本**
+**服务端版本是FastDFS_V5.11的情况下，单元测试全部通过**
 
 FastDFS-Client 1.27.2(2020-2-11)
 ---
