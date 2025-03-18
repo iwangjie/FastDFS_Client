@@ -98,7 +98,15 @@ class FieldMetaData {
             if (isDynamicField()) {
                 return (new String(bs, offsize, bs.length - offsize, charset)).trim();
             }
-            return (new String(bs, offsize, size, charset)).trim();
+            String s = new String(bs, offsize, size, charset);
+            // C 风格：如果中间存在 '\0'，只取前面部分
+            int nullPos = s.indexOf('\0');
+            if (nullPos >= 0) {
+                s = s.substring(0, nullPos);
+            }
+            // 再看看是否还要 trim() 前后空格
+            s = s.trim();
+            return s;
         } else if (long.class == field.getType()) {
             return BytesUtil.buff2long(bs, offsize);
         } else if (int.class == field.getType()) {
