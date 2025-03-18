@@ -1,9 +1,16 @@
+FastDFS-Client 1.27.2(iwangjie)(2025-3-18)
+---
+
+**基于 https://github.com/tobato/FastDFS_Client 的分支，主要修复 5.1x 的协议兼容问题，如果服务端版本为 5.1x 可以使用此版本**
+**服务端版本是FastDFS_V5.11的情况下，单元测试全部通过**
+
 FastDFS-Client 1.27.2(2020-2-11)
 ---
 
 This is a java client lib for [FastDFS](https://github.com/happyfish100/fastdfs).
 
 ## 介绍
+
 
 在原作者YuQing与yuqih发布的java客户端基础上进行了大量重构工作，便于Java工作者学习与阅读。
 
